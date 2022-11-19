@@ -1,5 +1,5 @@
 {% set name = "trino" %}
-{% set version = "0.316.0" %}
+{% set version = "0.317.0" %}
 
 package:
   name: trino-python-client
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/trino-{{ version }}.tar.gz
-  sha256: f92da6b45e8012ea52e77e58eae90c99e43f76445cdeadc93f38df74f7359240
+  sha256: 3f9a6c5566ac46510468154788445c7b83d0a6af2f418db308a48cf23b6e852d
 
 build:
   noarch: python
