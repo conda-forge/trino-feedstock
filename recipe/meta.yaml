@@ -10,17 +10,18 @@ source:
   sha256: aa4d25376529dbfc5b5d0968e808438f923eb7e296b1bc091ed0e3fb5a6957ad
 
 build:
-  skip: true  # [py<37]
+  noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
 
 requirements:
   host:
-    - python
+    - python >=3.7
     - pip
   run:
-    - python
-    - backports.zoneinfo  # [py<39]
+    - python >=3.7
+    # keep this for all python so we can stay noarch
+    - backports.zoneinfo
     - python-dateutil
     - pytz
     - requests
