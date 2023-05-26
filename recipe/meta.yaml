@@ -24,7 +24,7 @@ requirements:
     - backports.zoneinfo
     - python-dateutil
     - pytz
-    - requests
+    - requests >=2.31.0
     - tzlocal
 
 test:
