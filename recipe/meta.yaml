@@ -16,10 +16,10 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python >=3.8
     - pip
   run:
-    - python >=3.7
+    - python >=3.8
     # keep this for all python so we can stay noarch
     - backports.zoneinfo
     - python-dateutil
