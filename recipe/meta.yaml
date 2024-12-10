@@ -16,13 +16,11 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - python >=3.8
-    # keep this for all python so we can stay noarch
-    - backports.zoneinfo
+    - python >={{ python_min }}
     - python-dateutil
     - pytz
     - requests >=2.31.0
@@ -34,6 +32,7 @@ test:
   commands:
     - pip check
   requires:
+    - python {{ python_min }}
     - pip
 
 about:
