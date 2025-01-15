@@ -1,5 +1,5 @@
 {% set name = "trino" %}
-{% set version = "0.331.0" %}
+{% set version = "0.332.0" %}
 
 package:
   name: trino-python-client
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/trino-{{ version }}.tar.gz
-  sha256: 2d9acdf7b19d136c97c98e55599fb9a5556e124282b0a40afb93bdfbb5371708
+  sha256: 23fb44d0bafb5175f1111fef5a2f0caf32c751c32a26c0126553777f91bd2f56
 
 build:
   noarch: python
@@ -21,10 +21,12 @@ requirements:
     - setuptools
   run:
     - python >={{ python_min }}
+    - lz4
     - python-dateutil
     - pytz
     - requests >=2.31.0
     - tzlocal
+    - zstandard
 
 test:
   imports:
