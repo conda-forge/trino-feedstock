@@ -21,10 +21,12 @@ requirements:
     - setuptools
   run:
     - python >={{ python_min }}
+    - lz4
     - python-dateutil
     - pytz
     - requests >=2.31.0
     - tzlocal
+    - zstandard
 
 test:
   imports:
