@@ -22,9 +22,10 @@ requirements:
   run:
     - python >={{ python_min }}
     - lz4
+    - orjson >=3.11.0
     - python-dateutil
     - pytz
-    - requests >=2.31.0
+    - requests >=2.32.4
     - tzlocal
     - zstandard
 
