@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: trino
-  version: "0.338.0"
+  version: "0.339.0"
 
 package:
   name: trino-python-client
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/trino-${{ version }}.tar.gz
-  sha256: 1103d249cb96ba8f88f699588581965e2be088c16b9f8178e34cb64aa8a6c011
+  sha256: 8915dcaa08fa531539b361db2ea35d6055498204b572120f6d70742b0654daa0
 
 build:
   number: 0
@@ -37,7 +37,9 @@ tests:
       imports:
         - trino
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   summary: Client for the Trino distributed SQL Engine
