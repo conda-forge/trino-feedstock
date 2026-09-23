@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: trino
-  version: "0.339.0"
+  version: "0.340.0"
 
 package:
   name: trino-python-client
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/trino-${{ version }}.tar.gz
-  sha256: 8915dcaa08fa531539b361db2ea35d6055498204b572120f6d70742b0654daa0
+  sha256: 181cf0df1177c54699fe138df09932a95bbb249062375938f2c45c8db0ab39f2
 
 build:
   number: 0
